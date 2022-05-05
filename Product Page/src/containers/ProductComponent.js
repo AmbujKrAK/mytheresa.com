@@ -19,6 +19,7 @@ const ProductComponent = () => {
                 <div className="meta price">$ {price}</div>
                 <div className="meta">{category}</div>
               </div>
+              <div className="newArrival">New Arrival <img className="star" src="https://cdn-icons-png.flaticon.com/128/1828/1828970.png" alt="" /></div>
             </div>
           </div>
         </Link>
