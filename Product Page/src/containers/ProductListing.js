@@ -9,11 +9,11 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios
-      .get("http://localhost:3080/men")
+      .get("http://localhost:3080/women")
       .catch((err) => {
         console.log("Err: ", err);
       });
-    console.log(response.data, "response")
+    console.log(response, "response")
     dispatch(setProducts(response.data));
   };
 
