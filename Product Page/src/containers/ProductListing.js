@@ -9,10 +9,11 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios
-      .get("https://fakestoreapi.com/products")
+      .get("http://localhost:3080/men")
       .catch((err) => {
         console.log("Err: ", err);
       });
+    console.log(response.data, "response")
     dispatch(setProducts(response.data));
   };
 

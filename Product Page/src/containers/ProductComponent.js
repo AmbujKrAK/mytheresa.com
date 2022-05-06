@@ -15,7 +15,7 @@ const ProductComponent = () => {
                 <img src={image} alt={title} />
               </div>
               <div className="content">
-                <div className="header">{title}</div>
+                <div className="header">{product.name}</div>
                 <div className="meta price">$ {price}</div>
                 <div className="meta">{category}</div>
               </div>
