@@ -9,7 +9,7 @@ function Mobile({isOpen, setIsOpen}) {
         <i className="fi fi-rr-cross-circle"></i>
         </div>
         <div className='topic'>
-            <a href="#">WOMEN</a>
+            <Link to="/Women">WOMEN</Link>
             <a href="#">MEN</a>
             <a href="#">KIDS</a>
         </div>
