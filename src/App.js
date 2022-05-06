@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <Cart />
       <div className="Auth">
-        {/* <div><SignUp /></div> */}
+        <div><SignUp /></div>
         <div className="line"></div>
-        {/* <div><Signin /></div> */}
+        <div><Signin /></div>
 
 
       </div>
