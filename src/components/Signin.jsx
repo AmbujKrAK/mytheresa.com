@@ -48,7 +48,8 @@ export const Signin = () => {
             lastName: d.user.lastName,
             token: d.token
          }))
-         Cookies.set('token', d.token)
+         Cookies.set('token', d.token);
+         Cookies.set('mongooseId', d.user._id)
 
 
       } catch (error) {

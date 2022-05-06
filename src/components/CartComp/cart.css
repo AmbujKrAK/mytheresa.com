@@ -1,0 +1,19 @@
+.ptag-left {
+    text-align: left;
+}
+
+.btn-ryt {
+    float: right;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    border: transparent;
+}
+
+.cart-table {
+    width: 100%;
+    border: 1px solid red;
+}
+.cart-details{
+    display: flex;
+}
