@@ -8,5 +8,5 @@ Mytheresa is a German e-commerce luxury fashion company. It is a lifestyle fashi
 
 
 ## Tech Stack: 
- MongoDb || Express.Js || React || Node.js 
+ MongoDb | Express.Js | React | Node.js 
 
