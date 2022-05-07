@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from "react";
 import "./SignUp.css";
 import { useDispatch } from "react-redux";
@@ -30,7 +31,7 @@ export const SignUp = () => {
         event.preventDefault();
 
         try {
-            let res = await fetch("http://localhost:3080/register", {
+            let res = await fetch("https://mytheresa.herokuapp.com/register", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

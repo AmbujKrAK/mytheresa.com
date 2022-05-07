@@ -1,3 +1,4 @@
+import React from 'react'
 import { Signin } from "./components/Signin";
 import { SignUp } from "./components/SignUp";
 import { Cart } from "./components/CartComp/Cart";

@@ -1,3 +1,7 @@
+.main_cart_container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .ptag-left {
     text-align: left;
 }
@@ -89,8 +93,8 @@
 }
 
 .cardtd2:nth-child(3)>p {
-   display: flex;
-   cursor: pointer;
+    display: flex;
+    cursor: pointer;
 }
 
 .cardtd2>p {
@@ -100,4 +104,59 @@
 
 tr {
     border: 1px solid gray !important;
+}
+
+/* bag total css */
+.bagtotal{
+display: flex;
+justify-content: space-between;
+padding-top: 20px;
+}
+.bagtotal>div:nth-child(1){
+    width: 70%;
+    /* border: 1px solid green; */
+}
+.promo_div{
+    /* width: 60%; */
+}
+.promo {
+    width: 60%;
+    padding: 6px;
+    height: 20px;
+    margin: 0px;
+    border: 1px solid lightgray;
+}
+
+.promo-btn {
+    width: 25%;
+    padding: 10px;
+    border: transparent;
+    /* height: 20px; */
+    font-family: Futura-Medium, Century Gothic, Gill Sans, Helvetica, Arial, sans-serif;
+}
+
+.continue-btn {
+    cursor: pointer;
+    margin-top: 9%;
+    padding: 5px;
+    width: 25%;
+    border: transparent;
+    font-family: Futura-Medium, Century Gothic, Gill Sans, Helvetica, Arial, sans-serif;
+}
+.bag_summary{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.bag_summary>p{
+    margin: 2px;
+    color: #757575;
+}
+.bag_summary>p:nth-child(2){
+    color: black;
+    font-weight:bold ;
+}
+.bag_summary>button{
+    margin-top: 15%;
+    cursor: pointer;
 }

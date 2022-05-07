@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React from 'react'
+import { useState, useEffect, useRef } from "react";
 import { Empty } from "./Empty";
 import { IoIosStarOutline, IoMdClose } from "react-icons/io";
 import { BsCurrencyEuro, BsPlus, } from "react-icons/bs";
@@ -11,31 +12,36 @@ import axios from "axios";
 import "./cart.css";
 
 export const Cart = () => {
+    // let sum = 0;
 
-    let _id = Cookies.get("mongooseId")
-
+    let _id = Cookies.get("mongooseId");
+    // const [bagtotal,setbagtotal] = useState(0)
+    const bagtotal = useRef(0);
     const [bag, setbag] = useState([]);
+    // console.log(bag[0].menId.price)
+    const result = bag.reduce((total, currentValue) => total = total + (currentValue.menId.price * currentValue.menId.quant), 0);
     // const [quant,setquant] =  useEffect()
+    console.log(result,"res")
     useEffect(() => {
         getbagData()
     }, [])
     const getbagData = async () => {
-        let response = await axios.get(`http://localhost:3080/cart/${_id}`);
+        let response = await axios.get(`https://mytheresa.herokuapp.com/cart/${_id}`);
         setbag(response.data)
 
     }
     const updatebag = async (id, value) => {
-        let res = await axios.patch(`http://localhost:3080/cart/${id}`, { "quant": value });
+        let res = await axios.patch(`https://mytheresa.herokuapp.com/cart/${id}`, { "quant": value });
         console.log(res.data, "updated")
         setbag(res.data)
     }
     const deleteItem = async (id) => {
         console.log(id);
-        let res = await axios.delete(`http://localhost:3080/cart/${id}`)
+        let res = await axios.delete(`https://mytheresa.herokuapp.com/cart/${id}`)
         getbagData()
     }
     console.log(bag)
-    return <div>
+    return <div className="main_cart_container">
         {
             bag.length !== 0 ? <div>
                 <p className="ptag-left">YOUR SHOPPING BAG</p>
@@ -49,7 +55,7 @@ export const Cart = () => {
                     </thead>
                     <tbody>
                         {bag.map((e) => {
-                            console.log(e.menId, "eee")
+                         
                             return <tr style={{ border: "1px solid black" }} key={e._id}>
                                 <td className="cardtd1">
                                     <div className="cart-details">
@@ -59,7 +65,7 @@ export const Cart = () => {
                                         <div>
                                             <h3>{e.menId.brandName}</h3>
                                             <p>{e.menId.name}</p>
-                                            <p>{e.menId.size[0]}</p>
+                                            <p>Size : {e.menId.size[0]}</p>
                                             <p>Item No. : {e.menId.itemNo}</p>
                                             <div className="Remove-wishlist">
                                                 <IoMdClose size={"1.5em"} color={"#999"} />
@@ -83,7 +89,10 @@ export const Cart = () => {
                                             updatebag(e.menId._id, e.menId.quant - 1)
                                         }
                                     }} />  </p></td>
+                                   
                                 <td className="cardtd2"><p><BsCurrencyEuro />{(e.menId.price) * (e.menId.quant)}</p></td>
+
+                             
                             </tr>
                         })}
 
@@ -92,6 +101,26 @@ export const Cart = () => {
 
                     </tbody>
                 </table>
+                <div >
+                    <h4>YOUR CURRENT PROMOTIONS</h4>
+                    <p>Free shipping</p>
+                    <hr />
+                    <div className="bagtotal">
+                        <div>
+                            <div className="promo_div">
+                                <input className="promo" type="text" placeholder="Gift Card/ Store Credit/Promo Code" />
+                                <button className="promo-btn">USE CODE</button>
+                            </div>
+                            <button className="continue-btn">CONTINUE SHOPPING</button>
+                        </div>
+                        <div className="bag_summary">
+                            <p>Subtotal	€ {result}</p>
+                            <p>Grand Total	€ {result}</p>
+                            <p>incl. VAT excl. shipping costs</p>
+                            <button className="btn-ryt">PROCEED TO CHECKOUT</button>
+                        </div>
+                    </div>
+                </div>
 
             </div> : <Empty />
         }
