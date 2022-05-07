@@ -7,6 +7,15 @@ export const productsReducer = (state = intialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_PRODUCTS:
       return { ...state, products: payload };
+    case ActionTypes.SORTING:
+
+      if (payload === "low") {
+        console.log("payload", payload)
+        return { ...state, products: [...state.products].sort((a, b) => a.price - b.price) }
+      } else  {
+        console.log("payload", payload)
+        return { ...state, products: [...state.products].sort((a, b) => a.price - b.price) }
+      }
     default:
       return state;
   }

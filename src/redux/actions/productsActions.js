@@ -18,3 +18,8 @@ export const removeSelectedProduct = () => {
     type: ActionTypes.REMOVE_SELECTED_PRODUCT,
   };
 };
+export const sorting = ()=>{
+  return {
+    type : ActionTypes.SORTING
+  };
+}

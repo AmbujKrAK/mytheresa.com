@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useMemo } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productsActions";
+import { setProducts, sorting } from "../redux/actions/productsActions";
 import ProductComponent from "./ProductComponent";
 import SideNav from "./SideNav";
 import "../containers/ProductListing.css"
@@ -11,7 +11,7 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios
-      .get("https://fakestoreapi.com/products")
+      .get("https://mytheresa.herokuapp.com/men")
       .catch((err) => {
         console.log("Err: ", err);
       });
@@ -24,11 +24,35 @@ const ProductPage = () => {
 
   console.log("Products :", products);
   return (
-    <div className="allProducts">
-          <SideNav />
-          <div className="ui grid container">
+    <div >
+      <div style={{
+        marginTop: "5%",
+        padding: "10px",
+        paddingLeft: "60px",
+        display: "flex",
+        justifyContent: "space-around",
+        border: "1px solid lightgrey"
+      }}>
+        <p>
+          Men  |Clothing
+        </p>
+        <p>{products.length} products</p>
+        <select onChange={(e) => {
+          console.log(e.target.value)
+          dispatch(sorting(e.target.value))
+        }}>
+          <option>Sort By</option>
+          {/* <option value="high">Price high-to-low</option> */}
+          <option value="low">Price low-to-high</option>
+        </select>
+      </div>
+      <div className="allProducts">
+
+        <SideNav />
+        <div className="ui grid container">
           <ProductComponent />
-          </div>
+        </div>
+      </div>
     </div>
 
   );
