@@ -12,10 +12,10 @@ const ProductComponent = () => {
           <div className="ui link cards">
             <div className="card">
               <div className="image">
-                <img src={image} alt={title} />
+                <img src={product.images.img1} alt={title} />
               </div>
               <div className="content">
-                <div className="header">{title}</div>
+                <div className="header">{product.name}</div>
                 <div className="meta price">$ {price}</div>
                 <div className="meta">{category}</div>
               </div>
