@@ -1,25 +1,28 @@
-
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.order{
-    color: green;
+.order {
+  color: green;
 }
 
-.thank{
-    width: 90%;
-    margin: auto;
-    /* border: 2px solid black; */
-    margin-top: 15vh;
+.thank {
+  width: 90%;
+  margin: auto;
+  /* border: 2px solid black; */
+  margin-top: 15vh;
+  text-align: center;
+  border: 2px solid green;
+  padding: 50px;
+  border-radius: 8px;
 }
 
-.tick img{
-    width: 10%;
-    background-size: contain;
+.tick img {
+  width: 10%;
+  background-size: contain;
 }
 
-.logomytheres img{
-    width: 50%;
-    background-size: contain;
+.logomytheres img {
+  width: 50%;
+  background-size: contain;
 }
