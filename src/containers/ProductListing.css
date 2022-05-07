@@ -1,0 +1,5 @@
+.allProducts{
+    display: flex;
+    /* gap: 10%; */
+    /* justify-content: space-evenly; */
+}
