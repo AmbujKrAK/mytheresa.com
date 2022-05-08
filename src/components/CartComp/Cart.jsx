@@ -23,6 +23,7 @@ export const Cart = () => {
     if(bag.length!==0){
 
          result = bag.reduce((total, currentValue) => total = total + (currentValue.menId.price * currentValue.menId.quant), 0);
+         localStorage.setItem("bagtotal",result)
     }
     // const [quant,setquant] =  useEffect()
     console.log(result,"res")
@@ -32,12 +33,14 @@ export const Cart = () => {
     const getbagData = async () => {
         let response = await axios.get(`https://mytheresa.herokuapp.com/cart/${_id}`);
         setbag(response.data)
+        localStorage.setItem("bagItem",JSON.stringify(response.data))
 
     }
     const updatebag = async (id, value) => {
         let res = await axios.patch(`https://mytheresa.herokuapp.com/cart/${id}`, { "quant": value });
         console.log(res.data, "updated")
         setbag(res.data)
+        localStorage.setItem("bagItem", JSON.stringify(res.data))
     }
     const deleteItem = async (id) => {
         console.log(id);
