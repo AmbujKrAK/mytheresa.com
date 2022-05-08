@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./navbar.css";
-import Web from '../../../mytheresa-project/src/components/webview/web';
-import Mobile from "../../../mytheresa-project/src/components/mobile/mobile"
+import Web from '../../src/components/webview/web';
+import Mobile from "../../src/components/mobile/mobile"
 // import Heads from '../../../mytheresa-project/src/components/webview/header';
 
 function Navbar() {
