@@ -8,8 +8,8 @@ const ProductPage = () => {
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
   const fetchProducts = async () => {
-    const response = await axios
-      .get("http://localhost:3080/women")
+    const response = await fetch("https://mytheresa.herokuapp.com/men")
+    const Da = await response.json()
       .catch((err) => {
         console.log("Err: ", err);
       });
