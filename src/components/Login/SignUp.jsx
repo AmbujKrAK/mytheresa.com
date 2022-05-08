@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from "react";
 import "./SignUp.css";
 import { useDispatch } from "react-redux";
-import { login, userdetails } from "../Redux/Auth/action";
+import { login, userdetails } from "../../redux/Auth/action";
+import Cookies from 'js-cookie';
 // import { ToastContainer, toast } from 'react-toastify';
 //   import 'react-toastify/dist/ReactToastify.css';
 
@@ -48,7 +49,8 @@ export const SignUp = () => {
                 token: user.token
             }))
             alert(user.user.firstName, " Registered successfully");
-
+            Cookies.set('token', user.token);
+            Cookies.set('mongooseId', user.user._id)
         } catch (error) {
             alert("Please check user details ")
             console.log(error)
@@ -64,15 +66,15 @@ export const SignUp = () => {
 
             <form onSubmit={handleSubmit}>
 
-                <input id="firstName" onChange={handleChange} placeholder="First Name" type="text" required />
+                <input id="firstName" className='login_reg' onChange={handleChange} placeholder="First Name" type="text" required />
                 <br />
-                <input id="lastName" onChange={handleChange} placeholder="Last Name" type="text" required />
+                <input id="lastName" className='login_reg' onChange={handleChange} placeholder="Last Name" type="text" required />
                 <br />
-                <input id="email" onChange={handleChange} placeholder="Email" type="email" required />
+                <input id="email" className='login_reg' onChange={handleChange} placeholder="Email" type="email" required />
                 <br />
-                <input id="password" onChange={handleChange} placeholder="Password" type="password" required />
+                <input id="password" className='login_reg' onChange={handleChange} placeholder="Password" type="password" required />
                 <br />
-                <input id="Confirm_Password" placeholder="Confirm Password" type="password" required />
+                <input id="Confirm_Password" className='login_reg' placeholder="Confirm Password" type="password" required />
                 <br />
                 <p>
                     From now on I will receive the Mytheresa Newsletter with selected <br />

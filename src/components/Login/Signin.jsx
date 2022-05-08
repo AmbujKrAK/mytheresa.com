@@ -2,8 +2,8 @@ import React from 'react'
 import { useState } from "react";
 import "./SignUp.css";
 import { useDispatch } from "react-redux";
-import { login, userdetails } from "../Redux/Auth/action";
-import { useNavigate } from "react-router-dom";
+import { login, userdetails } from "../../redux/Auth/action";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from 'js-cookie'
 // import { ToastContainer, toast } from 'react-toastify';
@@ -19,7 +19,7 @@ export const Signin = () => {
 
    });
    const dispatch = useDispatch();
-   const navigate = useNavigate();
+   // const navigate = useNavigate();
    function handleChange(e) {
       const { id, value } = e.target;
 
@@ -70,9 +70,9 @@ export const Signin = () => {
          <form onSubmit={handleSubmit}>
 
 
-            <input id="email" onChange={handleChange} placeholder="Email" type="email" required />
+            <input id="email" className='login_reg' onChange={handleChange} placeholder="Email" type="email" required />
             <br />
-            <input id="password" onChange={handleChange} placeholder="Password" type="password" required />
+            <input id="password" className='login_reg' onChange={handleChange} placeholder="Password" type="password" required />
             <br />
             <p>*Required fields</p>
             <p>Forgot Your Password?</p>

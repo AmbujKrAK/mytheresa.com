@@ -16,10 +16,14 @@ export const Cart = () => {
 
     let _id = Cookies.get("mongooseId");
     // const [bagtotal,setbagtotal] = useState(0)
-    const bagtotal = useRef(0);
+    // const bagtotal = useRef(0);
     const [bag, setbag] = useState([]);
     // console.log(bag[0].menId.price)
-    const result = bag.reduce((total, currentValue) => total = total + (currentValue.menId.price * currentValue.menId.quant), 0);
+    let result = 0;
+    if(bag.length!==0){
+
+         result = bag.reduce((total, currentValue) => total = total + (currentValue.menId.price * currentValue.menId.quant), 0);
+    }
     // const [quant,setquant] =  useEffect()
     console.log(result,"res")
     useEffect(() => {
