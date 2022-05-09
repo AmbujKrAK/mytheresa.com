@@ -1,7 +1,12 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
+}
+
+body {
+  width: 98%;
+  margin: auto;
 }
 
 .ui.cards > .card > .image {
@@ -92,23 +97,22 @@
   margin-left: 0;
 }
 
-.newArrival{
+.newArrival {
   padding: 10px;
 }
 
 .star {
   width: 20px;
-  margin-left: 145px;
+  margin-left: 50%;
 }
-.column.rp .sizebtn{
+.column.rp .sizebtn {
   border: 1px solid red;
-  width:300px;
+  width: 300px;
   height: 35px;
- background-color: white;
+  background-color: white;
 }
-.sizebtn i{
+.sizebtn i {
   margin-left: 140px;
-  
 }
 
 .menu {
@@ -121,7 +125,7 @@
   width: 300px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  visibility:hidden;
+  visibility: hidden;
   transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
@@ -148,64 +152,67 @@
   padding: 10px 20px;
   display: block;
 }
-.menu li:hover{
+.menu li:hover {
   background-color: lightgray;
 }
-.column.rp .addbtn{
-  width:300px;
+.column.rp .addbtn {
+  width: 300px;
   height: 30px;
   color: white;
   background-color: black;
   border: none;
   margin-top: 10px;
   cursor: pointer;
-
 }
-.column.rp .addbtn:hover{
-    background-color: #333333;
+.column.rp .addbtn:hover {
+  background-color: #333333;
 }
 
-.column.rp .wishbtn{
-  width:300px;
+.column.rp .wishbtn {
+  width: 300px;
   height: 30px;
   border: none;
   background-color: lightgray;
   margin-top: 10px;
   cursor: pointer;
 }
-.column.rp .wishbtn:hover{
+.column.rp .wishbtn:hover {
   background-color: #dddddd;
 }
 
-.showbtnn{
+.showbtnn {
   width: 70%;
   height: 40px;
   border: none;
   border-top: #f4f1f1;
   border-bottom: lightgray;
-  background-color:white;
+  background-color: white;
   text-align: left;
   cursor: pointer;
 }
- .insta{
+.insta {
   width: 30px;
   height: 30px;
   margin: 10px;
   cursor: pointer;
   margin-top: 30px;
 }
-.twitter{
+.twitter {
   width: 30px;
   height: 30px;
   margin: 10px;
   margin-top: 30px;
   cursor: pointer;
 }
-.pint{
+.pint {
   width: 30px;
   height: 30px;
   margin: 10px;
   margin-top: 30px;
   cursor: pointer;
+}
 
+.header p {
+  width: 100%;
+  padding: 5px;
 }

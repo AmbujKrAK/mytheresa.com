@@ -54,3 +54,10 @@
     margin-bottom: 20px;
     margin-top: 20px;
 }
+.info > i{
+    margin-left: 5px;
+}
+
+.cart-pointer{
+    cursor: pointer;
+}

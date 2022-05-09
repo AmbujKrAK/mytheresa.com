@@ -9,6 +9,8 @@
     justify-content: flex-start;
     justify-content: space-around;
     /* border: 1px solid red; */
+    padding-top: 10px;
+    margin-top: 5px;
 }
 .content{
     /* border: 1px solid gainsboro; */

@@ -125,7 +125,7 @@ export const Cart = () => {
                             <p>Subtotal	€ {result}</p>
                             <p>Grand Total	€ {result}</p>
                             <p>incl. VAT excl. shipping costs</p>
-                            <button className="btn-ryt">PROCEED TO CHECKOUT</button>
+                            <button className="btn-ryt" onClick={() => {window.location.href="/shipping"}}>PROCEED TO CHECKOUT</button>
                         </div>
                     </div>
                 </div>

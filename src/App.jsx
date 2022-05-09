@@ -12,6 +12,8 @@ import { Footer } from "./components/Footer/Footer";
 import Web from "./components/Navbar/webview/web";
 import { Men } from "./components/Home/Men";
 import { Womens } from "./components/Home/Womens";
+import { Shipping } from "./components/Shipping/Shipping";
+import ThankYou from "./components/ThankyouPage/thankyou";
 
 function App() {
   return (
@@ -22,12 +24,15 @@ function App() {
       <Router>
         {/* <Header /> */}
         <Switch>
+        <Route path="/" exact component={Men} />
           <Route path="/men" component={Men} />
-          <Route path="/Women" component={Womens} />
+          <Route path="/women" component={Womens} />
           <Route path="/products" component={ProductListing} />
           <Route path="/cart" component={Cart} />
           <Route path="/product/:productId" component={ProductDetails} />
           <Route path="/login" component={Login_Signup} />
+          <Route path="/shipping" component={Shipping} /> 
+          <Route path="/thankyou" component={ThankYou} /> 
           <Route>404 Not Found!</Route>
         </Switch>
       </Router>
