@@ -4,14 +4,15 @@ Mytheresa is a German e-commerce luxury fashion company. It is a lifestyle fashi
 
 ## Snapshots 📷 
 - Landing Page (Home Page):
+<br>
 ![Home](../ScreenShots/Homepage.png?raw=true)
-- Landing Page (Login Page):
+- Login Page:
 ![Login](../ScreenShots/LoginPage.png?raw=true)
-- Landing Page (Product Page):
+- Product Page:
 ![Products](../ScreenShots/Productpage.png?raw=true)
-- Landing Page (Preview Page):
+- Preview Page:
 ![Preview](../ScreenShots/Previewpage.png?raw=true)
-- Landing Page (Cart Page):
+- Cart Page:
 ![Cart](../ScreenShots/Cartpage.png?raw=true)
 
 
