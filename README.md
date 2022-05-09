@@ -3,15 +3,15 @@
 Mytheresa is a German e-commerce luxury fashion company. It is a lifestyle fashion brand that lets their customers have a hassle-free and convenient online shopping experience.As part of our project, we had to replicate the landing page, login/sign up, and the product pages, along with the ability to wishlist an item, add an item to the cart, and checkout.
 
 ## Snapshots 📷 
-- `Home`
+- Landing Page (Home Page):
 ![Home](../ScreenShots/Homepage.png?raw=true)
-- `LogIn`
+- Landing Page (Login Page):
 ![Login](../ScreenShots/LoginPage.png?raw=true)
-- `Product`
+- Landing Page (Product Page):
 ![Products](../ScreenShots/Productpage.png?raw=true)
-- `Preview`
+- Landing Page (Preview Page):
 ![Preview](../ScreenShots/Previewpage.png?raw=true)
-- `Cart`
+- Landing Page (Cart Page):
 ![Cart](../ScreenShots/Cartpage.png?raw=true)
 
 
