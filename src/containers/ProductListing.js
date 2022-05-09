@@ -45,7 +45,7 @@ const ProductPage = () => {
           <option value="low">Price low-to-high</option>
         </select>
       </div>
-      <div className="allProducts">
+      <div className="allProducts" style={{display:"flex"}}>
 
         <SideNav />
         <div className="ui grid container">
